@@ -1,0 +1,6 @@
+YOLO数据集，图像识别预处理 
+实现图像带重叠率切割。将数据集从yolo格式转为voc格式，设置切割尺寸和重叠率，输出到images_crop和yolo_label_crop中。
+安装模块
+在classes中填写类别（中文好像有点bug）
+运行DP.py
+按要求设置路径和参数

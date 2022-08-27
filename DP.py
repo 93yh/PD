@@ -111,12 +111,12 @@ def clip_img(No, oriname, win_size, stride):
                             bndbox.appendChild(ymax1)
                         else:
                             continue
-                    xml_name = oriname+'_1368%d.xml' % (i)
+                    xml_name = oriname+'_'+str(win_size)+'%d.xml' % (i)
                     to_xml_name = os.path.join(target_dir2, xml_name)
                     with open(to_xml_name, 'wb+') as f:
                         f.write(doc.toprettyxml(indent="\t", encoding='utf-8'))
                     #name = '%02d_%02d_%02d_.bmp' % (No, int(r/win_size), int(c/win_size))
-                    img_name = oriname+'_1368%d.jpg' % (i)
+                    img_name = oriname+'_'+str(win_size)+'%d.jpg' % (i)
                     to_name = os.path.join(target_dir1, img_name)
                     i = i+1
                     cv2.imwrite(to_name, tmp)
